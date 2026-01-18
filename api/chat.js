@@ -80,10 +80,11 @@ module.exports = async (req, res) => {
     // --- INIT GEMINI ---
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash-latest",        temperature: 0.7,
+      model: "gemini-1.5-flash-latest",
+      generationConfig: {
+        temperature: 0.7,
         maxOutputTokens: 500,
-      },
-    });
+      }
 
     const chat = model.startChat({
       history: [
