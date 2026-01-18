@@ -83,8 +83,9 @@ module.exports = async (req, res) => {
       model: "gemini-1.5-flash-latest",
       generationConfig: {
         temperature: 0.7,
-        maxOutputTokens: 500,
+                maxOutputTokens: 500,
       }
+           });
 
     const chat = model.startChat({
       history: [
