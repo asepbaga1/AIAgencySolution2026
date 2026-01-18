@@ -1,275 +1,374 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KOSMARA AI Agency - Sistem AI untuk menerima, menyaring, dan mengonversi pelanggan melalui Website, Chatbot, dan Voice AI Agent 24/7.">
-    <meta name="keywords" content="AI Agency, Voice AI Agent, Chatbot AI, Otomasi Bisnis, Booking Otomatis, Lead Qualification">
-    <title>KOSMARA AI Agency Solution 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agency Solution 2026 | Kosmara Digital</title>
+  <meta name="description" content="Solusi AI untuk bisnis modern. Chatbot, automation, dan digital transformation.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    
+    /* Chat Animation */
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    .message-enter {
+      animation: slideUp 0.3s ease-out;
+    }
+    
+    /* Floating button pulse */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        section { padding: 70px 20px; }
-
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        p { color: #4a5568; }
-
-        /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            text-align: center;
-            padding: 90px 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.6rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 35px;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            background: #fff;
-            color: #667eea;
-            margin: 10px;
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-
-        /* PROBLEM & SOLUTION */
-        .grid {
-            display: grid;
-            gap: 30px;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            margin-top: 40px;
-        }
-
-        .card {
-            background: #f7fafc;
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        .card h3 {
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-        }
-
-        /* AI HUB */
-        .ai-hub {
-            background: #edf2f7;
-            text-align: center;
-        }
-
-        .ai-actions {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .ai-btn {
-            background: #667eea;
-            color: white;
-            padding: 18px 30px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            min-width: 240px;
-        }
-
-        .ai-btn.secondary {
-            background: #764ba2;
-        }
-
-        .note {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        /* PRICING */
-        .pricing {
-            background: #ffffff;
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 15px 0;
-            color: #667eea;
-        }
-
-        /* CTA */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-align: center;
-        }
-
-        footer {
-            background: #2d3748;
-            color: #fff;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        @media(max-width:768px){
-            .hero h1 { font-size: 1.9rem; }
-        }
-    </style>
+    /* Scrollbar custom */
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 3px;
+    }
+  </style>
 </head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
 
-<body>
+  <!-- Language Toggle -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="langToggle" class="bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all font-medium text-sm">
+      <span id="langIcon">🇮🇩</span> <span id="langText">ID</span>
+    </button>
+  </div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container">
-        <h1>Sistem AI 24/7 untuk Menerima & Mengonversi Pelanggan</h1>
-        <p>Website + Chatbot + Voice AI Agent yang bekerja menyaring calon pelanggan sebelum mereka masuk ke WhatsApp Anda.</p>
-        <a href="#cta" class="cta-button">Konsultasi Gratis 30 Menit</a>
-        <a href="#ai" class="cta-button cta-secondary">Coba AI Sekarang</a>
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 py-20 max-w-5xl">
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" data-lang="hero-title">
+        Transformasi Bisnis dengan AI
+      </h1>
+      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto" data-lang="hero-subtitle">
+        Otomasi pintar, chatbot cerdas, dan solusi digital yang menghasilkan konversi nyata.
+      </p>
+      <button id="startChatBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" data-lang="cta-main">
+        Mulai Konsultasi Gratis
+      </button>
     </div>
-</section>
 
-<!-- PROBLEM -->
-<section>
-    <div class="container">
-        <h2>Masalah Umum di Bisnis Jasa</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Chat Tidak Terbalas</h3>
-                <p>Lead datang di luar jam kerja dan hilang sebelum sempat dibalas.</p>
-            </div>
-            <div class="card">
-                <h3>Tim Capek Jawab Hal Sama</h3>
-                <p>Pertanyaan berulang menyita waktu yang seharusnya dipakai closing.</p>
-            </div>
-            <div class="card">
-                <h3>Lead Tidak Berkualitas</h3>
-                <p>Banyak yang tanya-tanya tapi tidak siap beli.</p>
-            </div>
+    <!-- Features Grid -->
+    <div class="grid md:grid-cols-3 gap-6 mt-16">
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+        <div class="text-4xl mb-4">🤖</div>
+        <h3 class="text-xl font-bold mb-2" data-lang="feature-1-title">Chatbot AI</h3>
+        <p class="text-gray-600" data-lang="feature-1-desc">Lead qualification otomatis 24/7</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+        <div class="text-4xl mb-4">⚡</div>
+        <h3 class="text-xl font-bold mb-2" data-lang="feature-2-title">Automation</h3>
+        <p class="text-gray-600" data-lang="feature-2-desc">Hemat waktu hingga 80%</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+        <div class="text-4xl mb-4">📈</div>
+        <h3 class="text-xl font-bold mb-2" data-lang="feature-3-title">ROI Terbukti</h3>
+        <p class="text-gray-600" data-lang="feature-3-desc">Konversi terukur & transparan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <button id="chatFloatBtn" class="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all z-40 pulse-animation">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+    </svg>
+  </button>
+
+  <!-- Chat Modal -->
+  <div id="chatModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-end md:items-center justify-center">
+    <div class="bg-white w-full md:w-[480px] md:h-[680px] h-[90vh] rounded-t-3xl md:rounded-3xl shadow-2xl flex flex-col">
+      
+      <!-- Chat Header -->
+      <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-3xl md:rounded-t-3xl flex justify-between items-center">
+        <div>
+          <h3 class="font-bold text-lg" data-lang="chat-title">Konsultan AI</h3>
+          <p class="text-sm opacity-90" data-lang="chat-status">Online • Siap membantu</p>
         </div>
-    </div>
-</section>
+        <button id="closeChat" class="text-white hover:bg-white hover:bg-opacity-20 p-2 rounded-full transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
 
-<!-- SOLUTION -->
-<section>
-    <div class="container">
-        <h2>Solusi: AI sebagai Gerbang Awal Pelanggan</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Chatbot AI (Text)</h3>
-                <p>Menyapa pengunjung, menjawab FAQ, dan menyaring kebutuhan awal secara otomatis.</p>
-            </div>
-            <div class="card">
-                <h3>Voice AI Agent</h3>
-                <p>Untuk lead serius yang ingin bicara langsung, AI menangani percakapan awal 24/7.</p>
-            </div>
-            <div class="card">
-                <h3>WhatsApp sebagai Closing Gate</h3>
-                <p>Hanya lead yang relevan diarahkan ke WhatsApp dengan konteks lengkap.</p>
-            </div>
+      <!-- Chat Messages -->
+      <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-4 custom-scroll bg-gray-50">
+        <!-- Initial bot message -->
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold flex-shrink-0">AI</div>
+          <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[75%]">
+            <p class="text-gray-800 text-sm" data-lang="chat-initial">Halo! Saya siap membantu Anda. Apa yang bisa saya bantu hari ini?</p>
+          </div>
         </div>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="p-4 border-t bg-white rounded-b-3xl md:rounded-b-3xl">
+        <form id="chatForm" class="flex gap-2">
+          <input 
+            type="text" 
+            id="chatInput" 
+            placeholder="Ketik pesan..." 
+            data-lang-placeholder="chat-placeholder"
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+            autocomplete="off"
+          />
+          <button 
+            type="submit" 
+            id="sendBtn"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+          </button>
+        </form>
+        <p class="text-xs text-gray-500 mt-2 text-center" data-lang="chat-footer">Powered by Gemini AI</p>
+      </div>
+
     </div>
-</section>
+  </div>
 
-<!-- AI INTERACTION HUB -->
-<section id="ai" class="ai-hub">
-    <div class="container">
-        <h2>AI Interaction Hub</h2>
-        <p>Rasakan langsung bagaimana sistem AI ini bekerja sebelum Anda memutuskan.</p>
+  <!-- Translation Data -->
+  <script>
+    const translations = {
+      id: {
+        'hero-title': 'Transformasi Bisnis dengan AI',
+        'hero-subtitle': 'Otomasi pintar, chatbot cerdas, dan solusi digital yang menghasilkan konversi nyata.',
+        'cta-main': 'Mulai Konsultasi Gratis',
+        'feature-1-title': 'Chatbot AI',
+        'feature-1-desc': 'Lead qualification otomatis 24/7',
+        'feature-2-title': 'Automation',
+        'feature-2-desc': 'Hemat waktu hingga 80%',
+        'feature-3-title': 'ROI Terbukti',
+        'feature-3-desc': 'Konversi terukur & transparan',
+        'chat-title': 'Konsultan AI',
+        'chat-status': 'Online • Siap membantu',
+        'chat-initial': 'Halo! Saya siap membantu Anda. Apa yang bisa saya bantu hari ini?',
+        'chat-placeholder': 'Ketik pesan...',
+        'chat-footer': 'Powered by Gemini AI'
+      },
+      en: {
+        'hero-title': 'Business Transformation with AI',
+        'hero-subtitle': 'Smart automation, intelligent chatbots, and digital solutions that drive real conversions.',
+        'cta-main': 'Start Free Consultation',
+        'feature-1-title': 'AI Chatbot',
+        'feature-1-desc': 'Automated lead qualification 24/7',
+        'feature-2-title': 'Automation',
+        'feature-2-desc': 'Save up to 80% of time',
+        'feature-3-title': 'Proven ROI',
+        'feature-3-desc': 'Measurable & transparent conversions',
+        'chat-title': 'AI Consultant',
+        'chat-status': 'Online • Ready to help',
+        'chat-initial': 'Hello! I\'m ready to assist you. What can I help you with today?',
+        'chat-placeholder': 'Type a message...',
+        'chat-footer': 'Powered by Gemini AI'
+      }
+    };
 
-        <div class="ai-actions">
-            <a href="https://gemini.google.com" target="_blank" class="ai-btn">
-                💬 Coba Chatbot AI (Text)
-            </a>
-            <a href="https://aistudio.google.com" target="_blank" class="ai-btn secondary">
-                🎙️ Bicara dengan Voice AI
-            </a>
+    let currentLang = 'id';
+    let chatHistory = [];
+
+    // Language toggle
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'id' ? 'en' : 'id';
+      updateLanguage();
+    });
+
+    function updateLanguage() {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-lang-placeholder');
+        if (translations[currentLang][key]) {
+          el.placeholder = translations[currentLang][key];
+        }
+      });
+
+      document.getElementById('langIcon').textContent = currentLang === 'id' ? '🇮🇩' : '🇬🇧';
+      document.getElementById('langText').textContent = currentLang.toUpperCase();
+    }
+
+    // Chat Modal Controls
+    const chatModal = document.getElementById('chatModal');
+    const chatFloatBtn = document.getElementById('chatFloatBtn');
+    const startChatBtn = document.getElementById('startChatBtn');
+    const closeChat = document.getElementById('closeChat');
+
+    function openChat() {
+      chatModal.classList.remove('hidden');
+      chatModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalChat() {
+      chatModal.classList.add('hidden');
+      chatModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    chatFloatBtn.addEventListener('click', openChat);
+    startChatBtn.addEventListener('click', openChat);
+    closeChat.addEventListener('click', closeModalChat);
+
+    // Close on backdrop click
+    chatModal.addEventListener('click', (e) => {
+      if (e.target === chatModal) closeModalChat();
+    });
+
+    // Chat functionality
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function addMessage(content, role = 'user') {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `flex items-start gap-3 message-enter ${role === 'user' ? 'flex-row-reverse' : ''}`;
+
+      const avatar = document.createElement('div');
+      avatar.className = `w-8 h-8 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 ${
+        role === 'user' 
+          ? 'bg-gray-700' 
+          : 'bg-gradient-to-r from-blue-600 to-purple-600'
+      }`;
+      avatar.textContent = role === 'user' ? 'U' : 'AI';
+
+      const bubble = document.createElement('div');
+      bubble.className = `p-3 rounded-2xl shadow-sm max-w-[75%] ${
+        role === 'user' 
+          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-tr-none' 
+          : 'bg-white text-gray-800 rounded-tl-none'
+      }`;
+
+      const text = document.createElement('p');
+      text.className = 'text-sm whitespace-pre-wrap';
+      text.textContent = content;
+
+      bubble.appendChild(text);
+      messageDiv.appendChild(avatar);
+      messageDiv.appendChild(bubble);
+      chatMessages.appendChild(messageDiv);
+
+      // Scroll to bottom
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+      const typing = document.createElement('div');
+      typing.id = 'typingIndicator';
+      typing.className = 'flex items-start gap-3 message-enter';
+      typing.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold flex-shrink-0">AI</div>
+        <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm">
+          <div class="flex gap-1">
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+          </div>
         </div>
+      `;
+      chatMessages.appendChild(typing);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
 
-        <p class="note">
-            *AI berfungsi sebagai penyaring & asisten awal, bukan pengganti manusia sepenuhnya.
-        </p>
-    </div>
-</section>
+    function removeTypingIndicator() {
+      const typing = document.getElementById('typingIndicator');
+      if (typing) typing.remove();
+    }
 
-<!-- PRICING -->
-<section class="pricing">
-    <div class="container">
-        <h2>Paket Layanan KOSMARA AI</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Starter</h3>
-                <p class="price">Rp5–8 Juta</p>
-                <p>Website AI-ready + Chatbot Text + WhatsApp Flow</p>
-            </div>
-            <div class="card">
-                <h3>Growth</h3>
-                <p class="price">Rp10–15 Juta</p>
-                <p>Chatbot + Voice AI + Booking Flow + Setup Prompt Bisnis</p>
-            </div>
-            <div class="card">
-                <h3>Scale</h3>
-                <p class="price">Custom</p>
-                <p>Multi halaman, multi flow AI, dan penyesuaian sesuai proses bisnis.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    async function sendMessage(message) {
+      if (!message.trim()) return;
 
-<!-- CTA -->
-<section id="cta" class="cta-section">
-    <div class="container">
-        <h2>Siap Mengubah Cara Bisnis Anda Menerima Pelanggan?</h2>
-        <p>Konsultasi gratis untuk menilai apakah sistem AI ini cocok untuk bisnis Anda.</p>
-        <a href="https://wa.me/6285189134621?text=Halo%20KOSMARA%20AI%2C%20saya%20ingin%20konsultasi%20AI%20untuk%20bisnis%20saya" target="_blank" class="cta-button">
-            Konsultasi via WhatsApp
-        </a>
-    </div>
-</section>
+      // Disable input
+      sendBtn.disabled = true;
+      chatInput.disabled = true;
 
-<footer>
-    <p><strong>KOSMARA AI Agency Solution 2026</strong></p>
-    <p>Sistem AI untuk Konversi Bisnis Nyata</p>
-    <p>© 2026 KOSMARA AI</p>
-</footer>
+      // Add user message
+      addMessage(message, 'user');
+      chatHistory.push({ role: 'user', content: message });
+
+      // Clear input
+      chatInput.value = '';
+
+      // Show typing
+      showTypingIndicator();
+
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            message,
+            history: chatHistory 
+          })
+        });
+
+        const data = await response.json();
+
+        removeTypingIndicator();
+
+        if (data.success && data.reply) {
+          addMessage(data.reply, 'bot');
+          chatHistory.push({ role: 'assistant', content: data.reply });
+        } else {
+          throw new Error(data.message || 'Unknown error');
+        }
+
+      } catch (error) {
+        removeTypingIndicator();
+        console.error('Chat error:', error);
+        addMessage(
+          currentLang === 'id' 
+            ? 'Maaf, terjadi kesalahan. Silakan coba lagi atau hubungi kami via WhatsApp.' 
+            : 'Sorry, an error occurred. Please try again or contact us via WhatsApp.',
+          'bot'
+        );
+      } finally {
+        // Re-enable input
+        sendBtn.disabled = false;
+        chatInput.disabled = false;
+        chatInput.focus();
+      }
+    }
+
+    // Form submit
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = chatInput.value;
+      sendMessage(message);
+    });
+
+    // Initialize
+    updateLanguage();
+  </script>
 
 </body>
 </html>
