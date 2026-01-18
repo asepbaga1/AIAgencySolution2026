@@ -3,428 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KOSMARA AI Agency - Otomasi Bisnis dengan Voice AI Agent dan Chatbot AI 24/7. Tingkatkan konversi dan booking otomatis.">
-    <meta name="keywords" content="AI Agency, Voice AI, Chatbot AI, Otomasi Bisnis, Konversi Lead">
-    <title>KOSMARA AI Agency - Otomasi Bisnis dengan Voice AI & Chatbot 24/7</title>
+    <meta name="description" content="KOSMARA AI Agency - Sistem AI untuk menerima, menyaring, dan mengonversi pelanggan melalui Website, Chatbot, dan Voice AI Agent 24/7.">
+    <meta name="keywords" content="AI Agency, Voice AI Agent, Chatbot AI, Otomasi Bisnis, Booking Otomatis, Lead Qualification">
+    <title>KOSMARA AI Agency Solution 2026</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #fff;
+            color: #2d3748;
+            background: #ffffff;
         }
-        
+
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px;
         }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px 60px;
+
+        section { padding: 70px 20px; }
+
+        h2 {
+            font-size: 2rem;
             text-align: center;
+            margin-bottom: 30px;
         }
-        
+
+        p { color: #4a5568; }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
-        
+
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
             opacity: 0.95;
         }
-        
+
         .cta-button {
             display: inline-block;
-            background: #fff;
-            color: #667eea;
-            padding: 16px 40px;
-            font-size: 1.1rem;
+            padding: 16px 36px;
+            border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fff;
+            color: #667eea;
             margin: 10px;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
+
         .cta-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: #fff;
+            border: 2px solid #fff;
         }
-        
-        .cta-secondary:hover {
-            background: rgba(255,255,255,0.1);
+
+        /* PROBLEM & SOLUTION */
+        .grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 40px;
         }
-        
-        /* Section Styles */
-        section {
-            padding: 60px 20px;
-        }
-        
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #2d3748;
-        }
-        
-        .problem-section {
+
+        .card {
             background: #f7fafc;
-        }
-        
-        .problems {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .problem-card {
-            background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* AI HUB */
+        .ai-hub {
+            background: #edf2f7;
             text-align: center;
         }
-        
-        .problem-card h3 {
-            color: #e53e3e;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+
+        .ai-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
         }
-        
-        .problem-card p {
-            color: #4a5568;
-            font-size: 1rem;
-        }
-        
-        /* Solution Section */
-        .solution-section {
-            background: white;
-        }
-        
-        .solutions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .solution-card {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 30px;
-            border-radius: 10px;
-            border: 2px solid #667eea30;
-            text-align: center;
-        }
-        
-        .solution-card h3 {
-            color: #667eea;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .solution-card p {
-            color: #4a5568;
-            font-size: 1rem;
-        }
-        
-        /* How It Works */
-        .how-it-works {
-            background: #f7fafc;
-        }
-        
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .step {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-        }
-        
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 30px;
+
+        .ai-btn {
             background: #667eea;
             color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 18px 30px;
+            border-radius: 12px;
+            text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            min-width: 240px;
         }
-        
-        .step h3 {
-            color: #2d3748;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            margin-top: 15px;
+
+        .ai-btn.secondary {
+            background: #764ba2;
         }
-        
-        .step p {
-            color: #4a5568;
-            font-size: 0.95rem;
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
         }
-        
-        /* CTA Section */
+
+        /* PRICING */
+        .pricing {
+            background: #ffffff;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 15px 0;
+            color: #667eea;
+        }
+
+        /* CTA */
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             text-align: center;
-            padding: 80px 20px;
         }
-        
-        .cta-section h2 {
-            color: white;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
-        /* Trust Section */
-        .trust-section {
-            background: white;
-        }
-        
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .trust-card {
-            padding: 30px;
-            border-radius: 10px;
-            background: #f7fafc;
-        }
-        
-        .trust-card h3 {
-            color: #2d3748;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .trust-card ul {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .trust-card li {
-            color: #4a5568;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .trust-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #48bb78;
-            font-weight: 700;
-        }
-        
-        .not-for li:before {
-            content: "✗";
-            color: #e53e3e;
-        }
-        
-        /* Footer */
+
         footer {
             background: #2d3748;
-            color: white;
+            color: #fff;
             text-align: center;
             padding: 30px 20px;
         }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            section h2 {
-                font-size: 1.6rem;
-            }
-            
-            .cta-button {
-                padding: 14px 30px;
-                font-size: 1rem;
-            }
+
+        @media(max-width:768px){
+            .hero h1 { font-size: 1.9rem; }
         }
     </style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Ubah Pengunjung Menjadi Pelanggan dengan AI Agent 24/7</h1>
-            <p>Otomasi respons, kualifikasi lead, dan booking konsultasi tanpa perlu tim customer service</p>
-            <a href="#cta" class="cta-button">Konsultasi Gratis 30 Menit</a>
-        </div>
-    </section>
 
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <h2>Bisnis Anda Kehilangan Uang Setiap Hari</h2>
-            <div class="problems">
-                <div class="problem-card">
-                    <h3>Chat Tidak Terbalas</h3>
-                    <p>Pelanggan potensial menghubungi di luar jam kerja, tidak ada yang merespons, mereka beralih ke kompetitor</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Respons Lambat = Lead Hilang</h3>
-                    <p>Menunggu berjam-jam untuk jawaban sederhana membuat calon pelanggan frustrasi dan kabur</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Tim Kewalahan</h3>
-                    <p>Staff Anda menghabiskan waktu menjawab pertanyaan berulang, bukan fokus closing deal</p>
-                </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Sistem AI 24/7 untuk Menerima & Mengonversi Pelanggan</h1>
+        <p>Website + Chatbot + Voice AI Agent yang bekerja menyaring calon pelanggan sebelum mereka masuk ke WhatsApp Anda.</p>
+        <a href="#cta" class="cta-button">Konsultasi Gratis 30 Menit</a>
+        <a href="#ai" class="cta-button cta-secondary">Coba AI Sekarang</a>
+    </div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+    <div class="container">
+        <h2>Masalah Umum di Bisnis Jasa</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Chat Tidak Terbalas</h3>
+                <p>Lead datang di luar jam kerja dan hilang sebelum sempat dibalas.</p>
+            </div>
+            <div class="card">
+                <h3>Tim Capek Jawab Hal Sama</h3>
+                <p>Pertanyaan berulang menyita waktu yang seharusnya dipakai closing.</p>
+            </div>
+            <div class="card">
+                <h3>Lead Tidak Berkualitas</h3>
+                <p>Banyak yang tanya-tanya tapi tidak siap beli.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Solution Section -->
-    <section class="solution-section">
-        <div class="container">
-            <h2>Solusi Kami: AI Yang Bekerja Untuk Anda</h2>
-            <div class="solutions">
-                <div class="solution-card">
-                    <h3>Voice AI Agent 24/7</h3>
-                    <p>Asisten suara AI yang menjawab panggilan, menyaring lead berkualitas, dan mengatur janji temu otomatis - bahkan saat Anda tidur</p>
-                </div>
-                <div class="solution-card">
-                    <h3>Chatbot AI Pendukung</h3>
-                    <p>Chatbot teks cerdas di website yang merespons instan, menjawab FAQ, dan mengarahkan prospek ke tahap berikutnya</p>
-                </div>
-                <div class="solution-card">
-                    <h3>Alur Booking Otomatis</h3>
-                    <p>Sistem terintegrasi yang mengumpulkan data pelanggan, mengkualifikasi kebutuhan, dan menjadwalkan konsultasi tanpa intervensi manual</p>
-                </div>
+<!-- SOLUTION -->
+<section>
+    <div class="container">
+        <h2>Solusi: AI sebagai Gerbang Awal Pelanggan</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Chatbot AI (Text)</h3>
+                <p>Menyapa pengunjung, menjawab FAQ, dan menyaring kebutuhan awal secara otomatis.</p>
+            </div>
+            <div class="card">
+                <h3>Voice AI Agent</h3>
+                <p>Untuk lead serius yang ingin bicara langsung, AI menangani percakapan awal 24/7.</p>
+            </div>
+            <div class="card">
+                <h3>WhatsApp sebagai Closing Gate</h3>
+                <p>Hanya lead yang relevan diarahkan ke WhatsApp dengan konteks lengkap.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>Cara Kerja Sistem Kami</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Pengunjung Datang</h3>
-                    <p>Calon pelanggan menemukan website Anda atau menghubungi melalui telepon</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>AI Menyapa & Menyaring</h3>
-                    <p>Voice AI atau Chatbot langsung merespons, bertanya kebutuhan, dan mengidentifikasi apakah prospek sesuai kriteria Anda</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>AI Kumpulkan Data</h3>
-                    <p>Sistem mencatat informasi kontak, kebutuhan spesifik, budget, dan timeline secara terstruktur</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Booking atau Follow-Up</h3>
-                    <p>Lead berkualitas langsung dijadwalkan konsultasi atau diteruskan ke WhatsApp tim Anda dengan data lengkap</p>
-                </div>
+<!-- AI INTERACTION HUB -->
+<section id="ai" class="ai-hub">
+    <div class="container">
+        <h2>AI Interaction Hub</h2>
+        <p>Rasakan langsung bagaimana sistem AI ini bekerja sebelum Anda memutuskan.</p>
+
+        <div class="ai-actions">
+            <a href="https://gemini.google.com" target="_blank" class="ai-btn">
+                💬 Coba Chatbot AI (Text)
+            </a>
+            <a href="https://aistudio.google.com" target="_blank" class="ai-btn secondary">
+                🎙️ Bicara dengan Voice AI
+            </a>
+        </div>
+
+        <p class="note">
+            *AI berfungsi sebagai penyaring & asisten awal, bukan pengganti manusia sepenuhnya.
+        </p>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+    <div class="container">
+        <h2>Paket Layanan KOSMARA AI</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Starter</h3>
+                <p class="price">Rp5–8 Juta</p>
+                <p>Website AI-ready + Chatbot Text + WhatsApp Flow</p>
+            </div>
+            <div class="card">
+                <h3>Growth</h3>
+                <p class="price">Rp10–15 Juta</p>
+                <p>Chatbot + Voice AI + Booking Flow + Setup Prompt Bisnis</p>
+            </div>
+            <div class="card">
+                <h3>Scale</h3>
+                <p class="price">Custom</p>
+                <p>Multi halaman, multi flow AI, dan penyesuaian sesuai proses bisnis.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section id="cta" class="cta-section">
-        <div class="container">
-            <h2>Siap Tingkatkan Konversi Bisnis Anda?</h2>
-            <p>Dapatkan konsultasi gratis 30 menit untuk analisis kebutuhan AI Agent di bisnis Anda</p>
-            <a href="https://wa.me/6285189134621?text=Halo%20KOSMARA%20AI%2C%20saya%20ingin%20konsultasi%20tentang%20Voice%20AI%20Agent%20untuk%20bisnis%20saya" class="cta-button" target="_blank">Hubungi via WhatsApp</a>
-            <a href="#trust" class="cta-button cta-secondary">Pelajari Lebih Lanjut</a>
-        </div>
-    </section>
+<!-- CTA -->
+<section id="cta" class="cta-section">
+    <div class="container">
+        <h2>Siap Mengubah Cara Bisnis Anda Menerima Pelanggan?</h2>
+        <p>Konsultasi gratis untuk menilai apakah sistem AI ini cocok untuk bisnis Anda.</p>
+        <a href="https://wa.me/6285189134621?text=Halo%20KOSMARA%20AI%2C%20saya%20ingin%20konsultasi%20AI%20untuk%20bisnis%20saya" target="_blank" class="cta-button">
+            Konsultasi via WhatsApp
+        </a>
+    </div>
+</section>
 
-    <!-- Trust & Clarification -->
-    <section id="trust" class="trust-section">
-        <div class="container">
-            <h2>Siapa Yang Cocok Menggunakan Solusi Ini?</h2>
-            <div class="trust-grid">
-                <div class="trust-card">
-                    <h3>Cocok Untuk:</h3>
-                    <ul>
-                        <li>Bisnis konsultasi dan jasa profesional</li>
-                        <li>Agency yang menerima banyak inquiry</li>
-                        <li>Klinik, salon, spa yang butuh sistem booking</li>
-                        <li>E-commerce yang ingin pre-qualify pembeli</li>
-                        <li>Startup yang ingin skalabilitas tanpa tambah SDM</li>
-                    </ul>
-                </div>
-                <div class="trust-card not-for">
-                    <h3>Tidak Cocok Untuk:</h3>
-                    <ul>
-                        <li>Bisnis yang tidak memiliki website atau nomor telepon</li>
-                        <li>Produk dengan proses jual sangat kompleks tanpa standar</li>
-                        <li>Bisnis yang tidak siap beradaptasi dengan teknologi AI</li>
-                        <li>Yang mencari solusi instan tanpa kustomisasi</li>
-                        <li>Yang mengharapkan AI menggantikan 100% interaksi manusia</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+    <p><strong>KOSMARA AI Agency Solution 2026</strong></p>
+    <p>Sistem AI untuk Konversi Bisnis Nyata</p>
+    <p>© 2026 KOSMARA AI</p>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p><strong>KOSMARA AI Agency Solution 2026</strong></p>
-            <p>Otomasi Bisnis dengan Voice AI Agent & Chatbot AI</p>
-            <p>© 2026 KOSMARA AI. Solusi AI untuk Konversi Bisnis.</p>
-        </div>
-    </footer>
 </body>
 </html>
