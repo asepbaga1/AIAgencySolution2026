@@ -1,3 +1,4 @@
+83
 // api/chat.js - Vercel Serverless Function
 // FINAL PRODUKSI - HARDENED, ANTI FRONTEND ERROR
 
@@ -80,7 +81,7 @@ module.exports = async (req, res) => {
     // --- INIT GEMINI ---
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash-latest",
+      model: "gemini-1.5-flash",
       generationConfig: {
         temperature: 0.7,
                 maxOutputTokens: 500,
